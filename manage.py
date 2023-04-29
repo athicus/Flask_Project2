@@ -18,14 +18,15 @@ def new_student():
 def addrec():
    if request.method == 'POST':
       try:
+         id = request.form['id']
          nm = request.form['nm']
-         addr = request.form['add']
-         city = request.form['city']
-         zip = request.form['zip']
+         gen = request.form['gen']
+         phn = request.form['phn']
+         bd = request.form['bd']
          
          with sql.connect("database.db") as con:
             cur = con.cursor()
-            cmd = "INSERT INTO students (name,addr,city,zip) VALUES ('{0}','{1}','{2}','{3}')".format(nm,addr,city,zip)
+            cmd = "INSERT INTO employees (name,addr,city,zip) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,nm,gen,phn,bd)
             cur.execute(cmd)
             
             con.commit()
@@ -44,10 +45,10 @@ def info():
    con.row_factory = sql.Row
    
    cur = con.cursor()
-   cur.execute("select * from students")
+   cur.execute("select * from employees")
    
    rows = cur.fetchall(); 
-   return render_template("list.htm",rows = rows)
+   return render_template("info.htm",rows = rows)
 
 if __name__ == '__main__':
    app.run(debug = True)
