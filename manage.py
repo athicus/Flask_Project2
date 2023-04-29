@@ -9,9 +9,9 @@ Bootstrap(app)
 def home():
    return render_template('home.htm')
 
-@app.route('/enternew')
+@app.route('/register')
 def new_student():
-   return render_template('student.htm')
+   return render_template('register.htm')
 
 
 @app.route('/addrec',methods = ['POST', 'GET'])
@@ -38,8 +38,8 @@ def addrec():
          return render_template("output.htm",msg = msg)
          con.close()
 
-@app.route('/list')
-def list():
+@app.route('/info')
+def info():
    con = sql.connect("database.db")
    con.row_factory = sql.Row
    
