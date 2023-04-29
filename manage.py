@@ -26,7 +26,7 @@ def addrec():
          
          with sql.connect("database.db") as con:
             cur = con.cursor()
-            cmd = "INSERT INTO employees (name,addr,city,zip) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,nm,gen,phn,bd)
+            cmd = "INSERT INTO employees (EmpId, EmpName, EmpGender, EmpPhone, EmpBdate) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,nm,gen,phn,bd)
             cur.execute(cmd)
             
             con.commit()
