@@ -9,18 +9,20 @@
 
       <table class="table table-striped table-bordered">
          <thead class="bg-primary">
+            <td>ID</td>
             <td>Name</td>
-            <td>Address</td>
-            <td>City</td>
-            <td>Zipcode</td>
+            <td>Gender</td>
+            <td>Phone Number</td>
+            <td>Birthdate</td>
          </thead>
          
          {% for row in rows %}
             <tr class="bg-info">
-               <td>{{row["name"]}}</td>
-               <td>{{row["addr"]}}</td>
-               <td> {{row["city"]}}</td>
-               <td>{{row['zip']}}</td>	
+               <td>{{row["EmpID"]}}</td>
+               <td>{{row["EmpName"]}}</td>
+               <td>{{row["EmpGender"]}}</td>
+               <td> {{row["EmpPhone"]}}</td>
+               <td>{{row['EmpBdate']}}</td>	
             </tr>
          {% endfor %}
       </table>
