@@ -1,6 +1,8 @@
-import sqlite3 as sql
-conn = sql.connect('database.db')
-print("Opened	database	successfully")
-conn.execute('CREATE TABLE employees (EmpID Text, EmpName	TEXT,	EmpGender	TEXT,	EmpPhone TEXT,	EmpBdate	TEXT)')
-print("Table created	successfully")
+import mysql.connector as sql
+conn = sql.connect(host="localhost",	user="flask",	password="ubuntu")
+cur = conn.cursor()
+#	Test	connection	(this	step	is	optional)
+print(conn)
+cmd = "CREATE	DATABASE	flask_db"
+cur.execute(cmd)
 conn.close()
