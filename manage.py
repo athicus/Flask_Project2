@@ -1,7 +1,8 @@
 from flask import Flask, url_for, redirect, render_template, request
 from flask_bootstrap import Bootstrap
 
-import sqlite3 as sql
+import mysql.connector as sql
+
 app = Flask(__name__)
 Bootstrap(app)
 
@@ -24,7 +25,7 @@ def addrec():
          phn = request.form['phn']
          bd = request.form['bd']
          
-         with sql.connect("database.db") as con:
+         with sql.connect(host="localhost", user="flask", password="ubuntu", database="flask_db") as con:
             cur = con.cursor()
             cmd = "INSERT INTO employees (EmpId, EmpName, EmpGender, EmpPhone, EmpBdate) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,nm,gen,phn,bd)
             cur.execute(cmd)
@@ -41,14 +42,12 @@ def addrec():
 
 @app.route('/info')
 def info():
-   con = sql.connect("database.db")
-   con.row_factory = sql.Row
-   
-   cur = con.cursor()
-   cur.execute("select * from employees")
-   
-   rows = cur.fetchall(); 
-   return render_template("info.htm",rows = rows)
+   with sql.connect(host="localhost", user="flask", password="ubuntu", database="flask_db") as conn:  
+      cur = conn.cursor()
+      cur.execute("select * from emplpoyees")
+      rows = cur.fetchall()
+
+   return render_template("list.htm",rows = rows)
 
 if __name__ == '__main__':
    app.run(debug = True)
