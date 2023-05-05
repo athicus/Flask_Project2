@@ -2,7 +2,7 @@ import mysql.connector as sql
 
 with sql.connect(host="localhost", user="flask", password="ubuntu", database="flask_db") as conn: 
     cur = conn.cursor()
-    cmd = "select name, addr, city, zip from students"
+    cmd = "select EmpName, EmpGender, EmpPhone, EmpBdate from employees"
 
     cur.execute(cmd)
     
