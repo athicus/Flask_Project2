@@ -44,7 +44,7 @@ def addrec():
 def info():
    with sql.connect(host="localhost", user="flask", password="ubuntu", database="flask_db") as conn:  
       cur = conn.cursor()
-      cur.execute("select * from emplpoyees")
+      cur.execute("select * from employees")
       rows = cur.fetchall()
 
    return render_template("list.htm",rows = rows)
