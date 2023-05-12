@@ -47,7 +47,7 @@ def info():
       cur.execute("select * from employees")
       rows = cur.fetchall()
 
-   return render_template("list.htm",rows = rows)
+   return render_template("info.htm",rows = rows)
 
 if __name__ == '__main__':
    app.run(debug = True)
