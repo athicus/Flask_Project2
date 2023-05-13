@@ -1,11 +1,11 @@
 import mysql.connector as sql
 conn = sql.connect(host="localhost",	user="flask",	password="ubuntu",	database="flask_db")
 cur = conn.cursor()
-cmd = "CREATE TABLE employees (\
-	EmpID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,\
-	EmpName	VARCHAR(30) NOT	NULL, \
-	EmpGender CHAR(1), \
-	EmpPhone VARCHAR(15), \
-	EmpBdate VARCHAR(30))"
+cmd = "CREATE TABLE appointments (\
+	LicPlate INT NOT NULL PRIMARY KEY,\
+	CusName	VARCHAR(30) NOT	NULL, \
+	CarType VARCHAR(15), \
+	CusPhone VARCHAR(15), \
+	AppDate VARCHAR(15))"
 cur.execute(cmd)
 conn.close()
