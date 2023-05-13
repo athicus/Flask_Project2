@@ -27,7 +27,7 @@ def addrec():
          
          with sql.connect(host="localhost", user="flask", password="ubuntu", database="flask_db") as con:
             cur = con.cursor()
-            cmd = "INSERT INTO employees (EmpId, EmpName, EmpGender, EmpPhone, EmpBdate) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,nm,gen,phn,bd)
+            cmd = "INSERT INTO appointments (LicPlate, CusName, CarType, CusPhone, AppDate) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(id,nm,gen,phn,bd)
             cur.execute(cmd)
             
             con.commit()
@@ -44,7 +44,7 @@ def addrec():
 def info():
    with sql.connect(host="localhost", user="flask", password="ubuntu", database="flask_db") as conn:  
       cur = conn.cursor()
-      cur.execute("select * from employees")
+      cur.execute("select * from appointments")
       rows = cur.fetchall()
 
    return render_template("info.htm",rows = rows)
