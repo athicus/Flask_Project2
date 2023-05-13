@@ -2,21 +2,22 @@
 <html>
    <body>
       <form action = "{{ url_for('addrec') }}" method = "POST">
-         <h3>Employee Information</h3>
-         Employee ID<br>
+         <h3>Appointment Information</h3>
+         License Plate<br>
          <input type = "text" name = "id" /></br>
          
-         Employee Name<br>
+         Name<br>
          <input type = "text" name = "nm" /></br>
       
-         Employee Gender<br>
-         <input name = "gen" ></textarea><br>
+         Car Type<br>
+         <input name = "text" name = "gen" /></br>
          
-         Employee Phone Number<br>
-         <input type = "text" name = "phn" /><br>
+         Phone Number<br>
+         <input type = "text" name = "phn" /></br>
          
-         Employee Birthdate<br>
-         <input type = "text" name = "bd" /><br>
+         Schedule Appointment (YYYY-MM-DD)<br>
+         <input type="text" name="bd" /></br>
+   
          <input type = "submit" value = "submit" /><br>
       </form>
    </body>
