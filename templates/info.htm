@@ -28,15 +28,17 @@
 
       <table class="custom-table">
          <thead>
-            <th>License Plate</th>
-            <th>Name</th>
-            <th>Car Type</th>
-            <th>Phone Number</th>
-            <th>Appointment Date</th>
+            <tr>
+               <th>License Plate</th>
+               <th>Name</th>
+               <th>Car Type</th>
+               <th>Phone Number</th>
+               <th>Appointment Date</th>
+            </tr>
          </thead>
          
          {% for row in rows %}
-            <tr class="bg-info">
+            <tr>
                <td>{{row[0]}}</td>
                <td>{{row[1]}}</td>
                <td>{{row[2]}}</td>
