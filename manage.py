@@ -31,13 +31,13 @@ def addrec():
             cur.execute(cmd)
             
             con.commit()
-            msg = "Record successfully added"
+            msg = "Appointment made succesfully"
       except:
          con.rollback()
-         msg = "error in insert operation"
+         msg = "Error with making appointment"
          
       finally:
-         return render_template("output.htm",msg = msg)
+         return render_template("output.htm",msg = msg, nm = nm)
          con.close()
 
 @app.route('/info')
