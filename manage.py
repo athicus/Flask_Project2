@@ -37,7 +37,7 @@ def addrec():
          msg = "Error with making appointment"
          
       finally:
-         return render_template("output.htm",msg = msg, nm = nm)
+         return render_template("output.htm",msg = msg, nm = nm, bd=bd)
          con.close()
 
 @app.route('/info')
