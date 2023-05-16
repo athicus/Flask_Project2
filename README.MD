@@ -14,7 +14,7 @@ the below files handle the MySQL database, table, connectivity, and creating a l
 
 `create_user.py` `create_db.py` `create_table.py` `connect_db.py` 
 
-Run the Flask app:
+Run the Flask app with
 
 `python manage.py`
 
