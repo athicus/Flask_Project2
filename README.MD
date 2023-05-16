@@ -1,4 +1,4 @@
-#Project branch for MGS 406 final 
+# Project branch for MGS 406 final 
 
 Use the requirements.txt file to install all necessary packages for this project  
 
