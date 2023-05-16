@@ -14,7 +14,7 @@ You may need to use python3 to replace python depending on your system settings
 
 `python -m venv venv`
 
-the below files handle connection MySQL database, table, connectivity and creating a local user
+the below files handle the MySQL database, table, connectivity and creating a local user
 
 `create_user.py` `create_db.py` `create_table.py` `connect_db.py` 
 
