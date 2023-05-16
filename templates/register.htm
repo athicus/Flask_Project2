@@ -1,21 +1,28 @@
 <!doctype html>
 <html>
+   <head>
+      <title>Schedule Appointment</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   </head>
    <body>
       <form action = "{{ url_for('addrec') }}" method = "POST">
-         <h3>Employee Information</h3>
-         Employee ID<br>
+         <h3>Appointment Information</h3>
+         License Plate:<br>
          <input type = "text" name = "id" /></br>
          
-         Employee Name<br>
+         Name:<br>
          <input type = "text" name = "nm" /></br>
       
-         Employee Gender<br>
+         Car Type:<br>
          <input name = "gen" ></textarea><br>
          
-         Employee Phone Number<br>
+         Phone Number:<br>
          <input type = "text" name = "phn" /><br>
          
-         Employee Birthdate<br>
+         Appointment Date:<br>
          <input type = "text" name = "bd" /><br>
          <input type = "submit" value = "submit" /><br>
       </form>
