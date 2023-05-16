@@ -2,7 +2,7 @@
 
 use the requirements.txt file to install all necessary packages for this project  
 
-`pip install -r requirements.txt`
+``pip install -r requirements.txt``
 
 If you have a Python virtual environment, activate it with the following command:
 
