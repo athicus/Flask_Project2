@@ -10,10 +10,6 @@ If you have a Python virtual environment, activate it with the following command
 
 ## If you don't have a Python virtual environment, or you just created a new work directory, use the following commands to create a new virtual environment:
 
-You may need to use python3 to replace python depending on your system settings 
-
-`python -m venv venv`
-
 the below files handle the MySQL database, table, connectivity, and creating a local user
 
 `create_user.py` `create_db.py` `create_table.py` `connect_db.py` 
