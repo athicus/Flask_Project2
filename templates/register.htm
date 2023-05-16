@@ -6,34 +6,32 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <style>
-         .indented-container {
-         padding: 1px;
-      }
   </style>
    </head>
    <body>
       <div class="container">
-         <form action = "{{ url_for('addrec') }}" method = "POST">
-            <h3>Appointment Information</h3>
-            License Plate:<br>
-            <input type = "text" name = "id" /></br>
+         <div class="d-flex justify-content-center">
+            <form action = "{{ url_for('addrec') }}" method = "POST">
+               <h3>Appointment Information</h3>
+               License Plate:<br>
+               <input type = "text" name = "id" /></br>
 
-            Name:<br>
-            <input type = "text" name = "nm" /></br>
+               Name:<br>
+               <input type = "text" name = "nm" /></br>
 
-            Car Type:<br>
-            <input name = "gen" ></textarea><br>
+               Car Type:<br>
+               <input name = "gen" ></textarea><br>
 
-            Phone Number:<br>
-            <input type = "text" name = "phn" /><br>
+               Phone Number:<br>
+               <input type = "text" name = "phn" /><br>
 
-            Appointment Date:<br>
-            <input type = "text" name = "bd" /><br>
-            <br>
-            <input type = "submit" class="btn btn-secondary" value = "submit" />
-            <a href = "\" class="btn btn-secondary">Home</a>
-         </form>
+               Appointment Date:<br>
+               <input type = "text" name = "bd" /><br>
+               <br>
+               <input type = "submit" class="btn btn-secondary" value = "submit" />
+               <a href = "\" class="btn btn-secondary">Home</a>
+            </form>
+         </div>
       </div>
    </body>
 </html>
