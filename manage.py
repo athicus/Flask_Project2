@@ -33,7 +33,7 @@ def addrec():
             con.commit()
             msg = "Appointment made succesfully"
       except:
-         #con.rollback()
+         con.rollback()
          msg = "Error with making appointment"
          
       finally:
