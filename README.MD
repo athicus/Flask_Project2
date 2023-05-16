@@ -25,3 +25,7 @@ In order to deploy the app with gunicorn use the command
 `gunicorn -w 4 --bind 0.0.0.0:5000 wsgi:app`
 
 The Flask app will be running on http://127.0.0.1:5000.
+
+db_dump.sql is provides a dump file with database, table, and records
+
+DemoVid demonstrates the project working
